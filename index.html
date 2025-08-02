@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <title>landing-page</title>
+</head>
+
+<body>
+    <header>
+<nav class="navbar">
+  <div class="container">
+    <h1 class="logo">SmartBook</h1>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#cta">Get Started</a></li>
+    </ul>
+  </div>
+</nav>
+    </header>
+    <main>
+        <section class="hero" id="hero">
+            <div class="hero-container">
+                <div class="hero-text" data-aos="fade-right">
+                    <h1>SmartBook</h1>
+                    <p>your AI Powered reading assistant that makes learning smarter,faster,and more engaging.</p>
+                    <a href="#features" class="cta-btn">get started</a>
+                </div>
+                <div class="hero-image" data-aos="fade-left">
+                    <img src="hero-illustration.svg" alt="AI Illustration">
+                </div>
+            </div>
+        </section>
+        <section class="features" id="features">
+            <div class="container">
+                <h1 class="section-title" data-aos="fade-up">core features</h1>
+                <div class="features-grid">
+                    <div class="features-card" data-aos="fade-up" data-aos-delay="100">
+                        <img src="features-icon.png" alt="Ai icon">
+                        <p>Smart algorithms help you read and understand better, tailored to your pace.</p>
+      </div>
+      <div class="features-card" data-aos="fade-up" data-aos-delay="200">
+        <img src="cloud icon.png" alt="Cloud Icon" class="feature-icon">
+        <h3>Cloud Sync</h3>
+        <p>Your reading progress is synced across devices securely and instantly.</p>
+      </div>
+      <div class="features-card" data-aos="fade-up" data-aos-delay="300">
+        <img src="easy icon.png" alt="Ease Icon" class="feature-icon">
+        <h3>User-Friendly</h3>
+        <p>Minimalist interface with powerful features that are easy to use.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="testimonials" id="testimonials">
+  <h2 class="section-title" data-aos="fade-up">What Our Users Say</h2>
+  <div class="testimonial-container" data-aos="fade-up" data-aos-delay="100">
+    <div class="testimonial active">
+      <p>"SmartBook has completely changed how I study. It’s like having a tutor 24/7!"</p>
+      <h4>Ahmed Raza</h4>
+    </div>
+    <div class="testimonial">
+      <p>"I love the interface and the personalized learning. Highly recommended!"</p>
+      <h4>Fatima Noor</h4>
+    </div>
+    <div class="testimonial">
+      <p>"The cloud sync is amazing — I can switch between my laptop and phone easily."</p>
+      <h4>Ali Khan</h4>
+    </div>
+  </div>
+</section>
+<section class="cta" id="cta">
+  <div class="cta-content" data-aos="zoom-in">
+    <h2>Ready to boost your learning?</h2>
+    <p>Join thousands of users who trust SmartBook for smarter reading.</p>
+    <a href="#hero" class="cta-btn">Get Started</a>
+  </div>
+</section>
+<<section class="form-section" id="contact">
+  <div class="form-container" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name">Your Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" rows="5" placeholder="Your message..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="container">
+    <p>&copy; 2025 SmartBook. All rights reserved.</p>
+  </div>
+</footer>
+                   
+
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script>
+  let index = 0;
+  const testimonials = document.querySelectorAll('.testimonial');
+
+  function showNextTestimonial() {
+    testimonials[index].classList.remove('active');
+    index = (index + 1) % testimonials.length;
+    testimonials[index].classList.add('active');
+  }
+
+  setInterval(showNextTestimonial, 4000); // Change every 4 seconds
+</script>
+</body>
+
+</html>
